@@ -90,7 +90,7 @@ buildscript {
   }
 }
 
-apply plugin: 'org.jetbrains.kotlin.multiplatform' // Or .jvm
+apply plugin: 'org.jetbrains.kotlin.multiplatform' // Or .jvm, or .android
 apply plugin: 'com.jakewharton.cite'
 ```
 
