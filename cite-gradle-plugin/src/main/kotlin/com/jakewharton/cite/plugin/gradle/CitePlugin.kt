@@ -3,6 +3,7 @@ package com.jakewharton.cite.plugin.gradle
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.SourceSet.MAIN_SOURCE_SET_NAME
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
@@ -27,6 +28,13 @@ public class CitePlugin : KotlinCompilerPluginSupportPlugin {
 		target.plugins.withId("org.jetbrains.kotlin.jvm") {
 			applied = true
 			val kotlin = target.extensions.getByType(KotlinJvmProjectExtension::class.java)
+			kotlin.sourceSets.getByName(MAIN_SOURCE_SET_NAME).dependencies {
+				implementation(target.citeRuntimeDependency())
+			}
+		}
+		target.plugins.withId("org.jetbrains.kotlin.android") {
+			applied = true
+			val kotlin = target.extensions.getByType(KotlinAndroidProjectExtension::class.java)
 			kotlin.sourceSets.getByName(MAIN_SOURCE_SET_NAME).dependencies {
 				implementation(target.citeRuntimeDependency())
 			}
