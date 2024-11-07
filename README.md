@@ -62,11 +62,11 @@ buildscript {
     mavenCental()
   }
   dependencies {
-    classpath 'com.jakewharton.cite:cite-gradle-plugin:0.2.0'
+    classpath 'com.jakewharton.cite:cite-gradle-plugin:0.3.0'
   }
 }
 
-apply plugin: 'org.jetbrains.kotlin.multiplatform' // Or .jvm
+apply plugin: 'org.jetbrains.kotlin.multiplatform' // Or .jvm, or .android
 apply plugin: 'com.jakewharton.cite'
 ```
 
@@ -86,7 +86,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath 'com.jakewharton.cite:cite-gradle-plugin:0.3.0-SNAPSHOT'
+    classpath 'com.jakewharton.cite:cite-gradle-plugin:0.4.0-SNAPSHOT'
   }
 }
 
@@ -104,7 +104,7 @@ certain versions of Kotlin.
 
 | Kotlin         | Cite          |
 |----------------|---------------|
-| 1.8.0 - 1.9.20 | 0.1.0 - 0.2.0 |
+| 1.8.0 - 1.9.25 | 0.1.0 - 0.3.0 |
 
 Kotlin versions newer than those listed may be supported but have not been tested.
 
