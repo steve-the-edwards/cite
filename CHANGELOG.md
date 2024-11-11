@@ -1,7 +1,17 @@
 # Change Log
 
 ## [Unreleased]
-[Unreleased]: https://github.com/JakeWharton/cite/compare/0.3.0...HEAD
+[Unreleased]: https://github.com/JakeWharton/cite/compare/0.4.0...HEAD
+
+
+
+## [0.4.0] - 2024-11-11
+[0.4.0]: https://github.com/JakeWharton/cite/releases/tag/0.4.0
+
+New:
+
+- Support Kotlin 2.0.21 at the K2 compiler. Older Kotlin 2.0.x versions may also work, but
+  are untested.
 
 
 ## [0.3.0] - 2024-11-07
