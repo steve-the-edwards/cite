@@ -1,7 +1,12 @@
 # Change Log
 
 ## [Unreleased]
-[Unreleased]: https://github.com/JakeWharton/cite/compare/0.4.0...HEAD
+[Unreleased]: https://github.com/JakeWharton/cite/compare/0.5.0...HEAD
+
+
+
+## [0.5.0] - 2024-11-20
+[0.5.0]: https://github.com/JakeWharton/cite/releases/tag/0.5.0
 
 New:
 - Change runtime dependency to `compileOnly` on JVM and Android projects.
