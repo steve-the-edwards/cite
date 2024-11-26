@@ -44,12 +44,8 @@ public class CitePlugin : KotlinCompilerPluginSupportPlugin {
 			kotlin.sourceSets.getByName(TEST_SOURCE_SET_NAME).dependencies {
 				compileOnly(target.citeApiDependency())
 			}
-			target.configurations.names.forEach { configName ->
-				if (configName.contains("androidTest")) {
-					kotlin.sourceSets.getByName(configName).dependencies {
-						compileOnly(target.citeApiDependency())
-					}
-				}
+			kotlin.sourceSets.getByName("androidTest").dependencies {
+				compileOnly(target.citeApiDependency())
 			}
 		}
 		target.afterEvaluate {
